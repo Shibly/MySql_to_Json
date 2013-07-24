@@ -34,23 +34,20 @@ class MySql_To_Json
             return false;
         }
 
-        return $numRows;
+        // return $numRows;
+        $result = array();
+        for ($i = 0; $i < $numFields; $i++) {
+            $result[$i] = array();
+            for ($j = 0; $j < count($field); $j++) {
+                return $result[$i][$field[$j]] = $query->fetch($i);
+            }
+        }
+
+        $json = json_encode($result);
+        return $json;
 
 
         /*
-           $fields = array();
-           $colName = array();
-           for ($i = 0; $i < $numFields; $i++) {
-               $fields[$i] = $query->getColumnMeta($i);
-               foreach ($fields as $field) {
-                   $colName[] = $field['name'];
-               }
-           }
-           if (!$numRows = $query->rowCount()) {
-               $this->errors[] = "Can not get the number of rows";
-               return false;
-           }
-
            $res = array();
            for ($i = 0; $i < $numRows; $i++) {
                for ($j = 0; $j < count($colName); $j++) {
