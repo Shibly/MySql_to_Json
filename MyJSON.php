@@ -83,7 +83,7 @@ class MySql_To_Json
 // Test
 
 
-$db = new MySql_To_Json('localhost', 'root', 'rivergod', 'drupal');
+$db = new MySql_To_Json('localhost', 'root', '12345', 'testdb');
 $res = $db->MySQLtoJSON('Select * from users', true);
 var_dump($res);
 
