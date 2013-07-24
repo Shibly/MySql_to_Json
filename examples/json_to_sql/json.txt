@@ -1,0 +1,22 @@
+[
+	{
+		"id":"1",
+		"title":"This is the example",
+		"author":"Sourcegeek"
+	},
+	{
+		"id":"2",
+		"title":"Example of MyJSON",
+		"author":"Sourcegeek"
+	},
+	{
+		"id":"3",
+		"title":"Only in CodeCanyon",
+		"author":"Sourcegeek"
+	},
+	{
+		"id":"4",
+		"title":"Hope you enjoy it!",
+		"author":"Sourcegeek"
+	}
+]
