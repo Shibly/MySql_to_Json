@@ -42,21 +42,9 @@ class MySql_To_Json
                 return $result[$i][$field[$j]] = $query->fetch($i);
             }
         }
-
         $json = json_encode($result);
         return $json;
 
-
-        /*
-           $res = array();
-           for ($i = 0; $i < $numRows; $i++) {
-               for ($j = 0; $j < count($colName); $j++) {
-                   $res[$i][$colName[$j]] = $query->fetch();
-               }
-           }
-           $json = json_encode($res);
-           return $json;
-        */
     }
 
 }
